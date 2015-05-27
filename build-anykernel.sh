@@ -24,20 +24,18 @@ VER=Render-Kernel
 
 # Vars
 export LOCALVERSION=~`echo $VER`
-export CROSS_COMPILE=${HOME}/android/source/toolchains/UBER-arm-eabi-4.9-cortex-a15-041915/bin/arm-eabi-
+export CROSS_COMPILE=${HOME}/NDK-64/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
 export ARCH=arm
 export SUBARCH=arm
-export KBUILD_BUILD_USER=RenderBroken
-export KBUILD_BUILD_HOST=RenderServer.net
 export CCACHE=ccache
 
 # Paths
 KERNEL_DIR=`pwd`
-REPACK_DIR="${HOME}/android/source/kernel/Victara-AnyKernel"
-PATCH_DIR="${HOME}/android/source/kernel/Victara-AnyKernel/patch"
-MODULES_DIR="${HOME}/android/source/kernel/Victara-AnyKernel/modules"
-ZIP_MOVE="${HOME}/android/source/zips/victara-zips"
-ZIMAGE_DIR="${HOME}/android/source/kernel/msm8974_motox2014_render_kernel/arch/arm/boot"
+REPACK_DIR="${HOME}/Victara-AnyKernel"
+PATCH_DIR="${HOME}/Victara-AnyKernel/patch"
+MODULES_DIR="${HOME}/Victara-AnyKernel/modules"
+ZIP_MOVE="${HOME}/zips/victara-zips"
+ZIMAGE_DIR="${HOME}/msm8974_motox2014_render_kernel/arch/arm/boot"
 VARIANT="VICTARA"
 
 # Functions
@@ -54,7 +52,7 @@ function clean_all {
 function make_kernel {
 		echo
 		make $DEFCONFIG
-		make $THREAD CONFIG_DEBUG_SECTION_MISMATCH=y
+		make $THREAD CONFIG_DEBUG_SECTION_MISMATCH=y CONFIG_NO_ERROR_ON_MISMATCH=y
 		cp -vr $ZIMAGE_DIR/$KERNEL $REPACK_DIR
 }
 
