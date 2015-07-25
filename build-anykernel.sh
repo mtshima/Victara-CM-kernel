@@ -24,7 +24,7 @@ VER=Render-Kernel
 
 # Vars
 export LOCALVERSION=~`echo $VER`
-export CROSS_COMPILE=${HOME}/NDK-64/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-
+export CROSS_COMPILE=${HOME}/android-linaro-toolchain-eabi/bin/arm-linux-androideabi-
 export ARCH=arm
 export SUBARCH=arm
 export CCACHE=ccache
@@ -34,7 +34,7 @@ KERNEL_DIR=`pwd`
 REPACK_DIR="${HOME}/Victara-AnyKernel"
 PATCH_DIR="${HOME}/Victara-AnyKernel/patch"
 MODULES_DIR="${HOME}/Victara-AnyKernel/modules"
-ZIP_MOVE="${HOME}/zips/victara-zips"
+ZIP_MOVE="${HOME}/victara-kernel-zips"
 ZIMAGE_DIR="${HOME}/msm8974_motox2014_render_kernel/arch/arm/boot"
 VARIANT="VICTARA"
 
