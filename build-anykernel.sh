@@ -35,7 +35,7 @@ REPACK_DIR="${HOME}/Victara-AnyKernel"
 PATCH_DIR="${HOME}/Victara-AnyKernel/patch"
 MODULES_DIR="${HOME}/Victara-AnyKernel/modules"
 ZIP_MOVE="${HOME}/victara-kernel-zips"
-ZIMAGE_DIR="${HOME}/msm8974_Victara_render_kernel/arch/arm/boot"
+ZIMAGE_DIR="${HOME}/Victara-CM-kernel/arch/arm/boot"
 VARIANT="VICTARA"
 
 # Functions
